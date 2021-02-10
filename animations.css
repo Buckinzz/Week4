@@ -1,0 +1,66 @@
+/* :root {
+    --blue: steelblue;
+    --red: firebrick;
+    --green: mediumseagreen ;
+} */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100%;
+    font-family: sans-serif;
+}
+
+.center{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box{
+    height: 250px;
+    width: 250px;
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation-name: color-change;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+}
+
+h1{
+    transition: 0.5s;
+}
+
+.box h1:hover{
+    transform: rotate(360deg);
+}
+
+@keyframes color-change{
+    0% {background-color: #333;}
+    25% {background-color: firebrick;}
+    50% {background-color:steelblue;}
+    75% {background-color: mediumseagreen;}
+    100% {background-color: #333;}
+}
+
+@keyframes inside{
+    from{transform:rotate(0deg)}
+
+    to{transform: rotate(360deg);} 
+}
+
+@keyframes out{
+    from{transform: rotate(360deg);}
+    
+    to{transform: rotate(0deg);}
+}
